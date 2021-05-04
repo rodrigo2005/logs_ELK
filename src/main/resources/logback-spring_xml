@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProperty name="appName"    source="info.app.name" />
+    <springProperty name="logHost"    source="pulse.logstash.host" />
+
+<include resource="org/springframework/boot/logging/logging/logback/base.xml" />
+
+    <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>${logHost}</destination>
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+           <providers>
+               <mdc />
+               <context />
+<!--               <loglevel />-->
+               <loggerName />
+               <pattern>
+                   <pattern>
+                       {
+                       "appName": "app"
+                       }
+                   </pattern>
+               </pattern>
+               <threadName />
+               <message />
+               <logstashMarkers />
+               <stackTrace />
+           </providers>
+        </encoder>
+    </appender>
+
+
+    <root level="info">
+        <appender-ref ref="logstash" />
+    </root>
+</configuration>

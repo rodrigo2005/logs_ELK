@@ -1,0 +1,12 @@
+info:
+  app:
+    name: ceres-app
+pulse:
+  logstash:
+    host: 192.168.0.210:5000
+
+
+logging:
+  file:
+    name: /ceres/logs
+    #name: C:/logs/elk-stack.log
