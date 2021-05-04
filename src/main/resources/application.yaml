@@ -8,5 +8,5 @@ pulse:
 
 logging:
   file:
-    name: /ceres/logs
+    name: /ceres/logs/app.log
     #name: C:/logs/elk-stack.log
