@@ -6,7 +6,7 @@ pulse:
     host: 192.168.0.210:5000
 
 
-logging:
-  file:
-    name: /ceres/logs/app.log
+#logging:
+#  file:
+#    name: /ceres/logs/app.log
     #name: C:/logs/elk-stack.log
