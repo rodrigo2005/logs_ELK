@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <appender name="STASH" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>C:/logs/ceres-app.log</file>
+        <file>/ceres/logs/ceres-app.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>logs/ceres-app.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>7</maxHistory>
